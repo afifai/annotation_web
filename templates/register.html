@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Daftar - Pembangkit Caption Otomatis</title>
+ 
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <link href="{{ url_for('static', filename='css/register.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <!-- <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+</head>
+<body>
+  <!--  Scripts-->
+  <script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.jcarousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <!-- /Scripts-->
+  <div id = "login">
+    <nav class="white" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+     <i class="material-icons">menu</i>
+     <ul class="hide-on-med-and-down right" id="nav-bar">
+      <li><a href="/login/">Masuk</a></li>
+      <li><a href="/register/">Daftar</a></li>
+    </ul>
+  </div>
+</nav>
+    <div class="title">
+      <p class = "register-or-login">DAFTAR AKUN</p>
+      <p>Sudah punya akun ? <a href="/login/">Masuk di sini</a></p>
+      <div class="warning-container"> 
+          {% if error %}
+          <p>{{error}}</p> 
+          {% endif %}
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="mycontent-right register-content">
+          <form action="" class="form-inline" method="post">
+          <input placeholder = "Nama Lengkap" class="authentication-input" id="name" name="name" value="{{request.form.name}}" required="required" />
+          <select class="authentication-input jenis-tabungan" id="name" name="gender" required="required">
+          <option value=""> - Jenis Kelamin - </option>
+          <option value="pria">Laki-laki</option>
+          <option value="wanita">Perempuan</option>
+          </select>
+          <input placeholder = "Email" class="authentication-input" id="email" name="email" value="{{request.form.email}}" required="required"/>
+          <p id="email-error" class="error-input">Email tidak valid</p>
+          <input placeholder = "Nomor Handphone" class="authentication-input" id="hp" name="hp" value="{{request.form.hp}}" required="required">
+          <input type="password" placeholder = "Kata Sandi" class="authentication-input" id="password" name="password" value="{{request.form.password}}" required="required">
+<!--           <p id="password-error" class="error-input">Harap isi password dengan minimal 6 karakter dan harus mengandung huruf dan angka</p> -->
+          <input type="password" placeholder = "Ulang Kata Sandi" class="authentication-input" id="confirm-password" name="confirm-password" value="{{request.form.confirm}}" required="required">
+<!--           <p id="confirm-password-error" class="error-input">Harap isi password dengan minimal 6 karakter dan harus mengandung huruf dan angka</p> -->
+          <input class="btn submit-login" type="submit" value="Daftar">
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

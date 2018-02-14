@@ -1,0 +1,36 @@
+{% extends "header.html" %}
+{% block title %}Petunjuk {% endblock %}
+{% block body %}
+      <center><p class = "register-or-login">Petunjuk Penggunaan Website</p></center>
+      <center><p><em>Aplikasi anotasi citra</em></p></center>
+      <br/>
+      <p>Selamat datang, {{nama}}. <br/>Terima kasih atas kesediannya untuk menggunakan web ini.</p>
+      <p>Website ini merupakan website pengumpul dataset yang digunakan untuk penelitian hibah PTUPT 2018 dibawah bimbingan Bapak Dr. Eng Ivan Fanany, S.Si, M.Kom.</p>
+
+      <p>Oleh karena penelitian <em>machine learning</em> membutuhkan dataset yang cukup banyak, kami memerlukan bantuan anda untuk membantu anotasi data pada citra pariwisata. Anotasi merupakan objek-objek yang ada pada citra, serta caption yang bersesuaian dengan citra tersebut.</p> 
+
+  	<p>Oleh karena itu, kami membutuhkan bantuan teman-teman semua untuk mengupload citra (boleh dari Google atau dengan kamera pribadi) beserta minimal 5 <em>caption</em> yang sesuai dengan citra tersebut dan lakukan anotasi objek dengan menggunakan program LabelImg yang bisa didownload dan dibaca cara penggunaannya di <a href="https://github.com/tzutalin/labelImg"> github resminya</a></p>
+
+      <p> Contoh gambar dan pemberian captionnya adalah sebagai berikut:</p>
+      <br/>
+      <center><img src="{{ url_for('static', filename='images/ondelondel.jpg') }}" width="200"></center>
+      <p>Caption :</p>
+      <ol>
+      	<li>Sepasang ondel-ondel berdiri didepan Monas</li>
+      	<li>Ondel-ondel merah dan ondel-ondel putih sedang berdiri didepan Monas</li>
+      	<li>Ondel-ondel laki-laki dan ondel-ondel perempuan sedang berdiri didepan Monas</li>
+      	<li>Sepasang ondel-ondel berdiri didepan Monas pada malam hari</li>
+            <li>Dua buah ondel-ondel sedang berdiri didepan Monumen Nasional</li>
+      </ol>
+
+      <p>Selain memasukkan caption, anda perlu menigupload xml yang berupa region dari objek citra tersebut ditempat yang telah disediakan</p>
+
+      <p>Apabila sudah siap, silahkan klik tab Anotasi.</p>
+
+
+      <p>Atas perhatiannya, saya ucapkan terima kasih</p>
+      <br/>
+
+      <p>Salam,</p>
+      <p>Lab MLCV FASILKOM Universitas Indonesia</p>
+{% endblock %}

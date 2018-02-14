@@ -1,0 +1,10 @@
+.animal-image-container {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 27px;
+    font-weight: bold;
+    width: 273px;
+    height: 250px;
+}

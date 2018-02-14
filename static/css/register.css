@@ -1,0 +1,141 @@
+.header{
+	background-color: #033D52;
+}
+
+.authentication-input {
+  padding-left: 40px;
+  border-radius: 6px;
+  display: block;
+  width: 50%;
+  height: 40px;
+  margin: 12px auto;
+}
+
+textarea.authentication-input {
+  height: 80px;
+}
+
+@media only screen and (max-width: 992px) {
+  .authentication-input {
+    width: 90%;
+  }
+}
+
+.forgot-password {
+  margin-left: 30%;
+}
+
+.submit-login {
+  margin: 35px auto;
+  display: block;
+  width: 25%;
+  color: white;
+  background-color: #033D52;
+}
+
+.title{
+  text-align: center;
+  margin: 10px;
+}
+
+.register-or-login{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.register-content.mycontent-right{
+	padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.gender+p{
+  display: inline-block;;
+}
+
+.mycontent-left div {
+  margin: 10px;
+}
+
+.mycontent-left .btn {
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.or-text{
+  text-align: center;
+  border-bottom: 2px solid grey;
+}
+
+#name{
+  background: url(../images/1.png)  no-repeat scroll 7px 7px;
+}
+
+#email{
+  background: url(../images/2.png)  no-repeat scroll 7px 7px;
+}
+
+#hp{
+  background: url(../images/3.png)  no-repeat scroll 7px 7px;
+}
+
+#password{
+  background: url(../images/4.png)  no-repeat scroll 7px 7px;
+}
+
+#confirm-password{
+  background: url(../images/4.png)  no-repeat scroll 7px 7px;
+}
+#paket-tabungan{
+  background: url(../images/5.png)  no-repeat scroll 7px 7px;
+}
+#jenis-tabungan{
+  background: url(../images/5.png)  no-repeat scroll 7px 7px;
+}
+#rekening{
+  background: url(../images/6.png)  no-repeat scroll 7px 7px;
+}
+#referensi{
+  background: url(../images/7.png)  no-repeat scroll 7px 7px;
+}
+#alamat{
+  background: url(../images/8.png)  no-repeat scroll 7px 7px;
+}
+.dropdown-container{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.table td{
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+.table {
+  margin: 20px auto;
+  width: 50%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.table select{
+  width: 90%;
+}
+
+.calculator-input{
+  background: white;
+  border:none;
+  text-align: center;
+}
+.warning-container p{
+  color: red;
+  margin: 0;
+  padding: 3px;
+  display: inline;
+  background-color: gainsboro;
+}
+
+.warning-container{
+  margin-top: 20px;
+}

@@ -1,0 +1,33 @@
+{% extends "header.html" %}
+{% block title %}Anotasi {% endblock %}
+{% block body %}
+    <div class="title">
+      <p class = "register-or-login">ANOTASI CITRA KEBUDAYAAN BETAWI</p>
+      <p>Halo {{nama}}, kamu sudah upload {{jum}} Citra</p>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <p>
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+        </p>
+      {% endif %}
+    {% endwith %}
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="mycontent-right register-content">
+          <form action="upload" class="form-inline" method="post" enctype = "multipart/form-data">
+          <p>Upload citra disini : </p>
+          <center><input type="file" name="file" placeholder="Upload citra disini" required="required"></center>
+          <p>Upload object xml disini : </p>
+          <center><input type="file" name="label" placeholder="Upload label disini" required="required"></center>
+          <textarea rows="2" cols="200" type="text" placeholder = "Tulis caption gambar tersebut" class="authentication-input alamat" name="caption" value="{{request.form.caption}}" required="required"></textarea>
+          <input class="btn submit-login" type="submit" value="UPLOAD">
+          </form>
+
+        </div>
+        <p>NB: Tulis minimal 4 caption (boleh lebih), pisahkan dengan (enter). Contoh:</p>
+        <p>Caption 1<br/>Caption 2<br/>Caption 3<br />Caption 4<br/>Dst.
+{% endblock %}

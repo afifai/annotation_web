@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>{% block title %}{% endblock %} - Pembangkit Caption Otomatis</title>
+
+ <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <!--  Scripts-->
+  <script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.jcarousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <!-- /Scripts-->
+  <div class = "static">
+    <nav class="white" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+     <i class="material-icons">menu</i>
+     <ul class="hide-on-med-and-down right" id="nav-bar">
+      {% if session.logged_in %}
+        <li><a href="/">Petunjuk</a></li>
+        <li><a href="/anotasi/">Anotasi</a></li>
+        <li><a href="/logout/">Keluar</a></li>
+      {% else %}
+        <li><a href="/login/">Masuk</a></li>
+        <li><a href="/register/">Daftar</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+    <div class="static-content">
+
+
+    {% block body %}{% endblock %}
+
+
+    </div>
+</body>
+</html>
